@@ -1,0 +1,14 @@
+name: Event Logging
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+
+jobs:
+  log_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Event
+        run: |
+          echo "Trigger - ${{ github.event_name }}, user - ${{ github.actor }}, date - $(date)"
