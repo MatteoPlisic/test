@@ -1,9 +1,7 @@
 name: Event Logging
+
 on:
-  issues:
-    types:
-      - opened
-      - labeled
+  issues
 
 jobs:
   log_event:
